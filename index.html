@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -42,6 +42,9 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+    .s_main{
+               min-height: 900px;
+    }
     .s_tbdr{
       border:1px dashed #000;
     }
@@ -49,6 +52,28 @@
              background-color: #FFB900 !important;
              color: black !important;
     }
+      #circle{
+                height: 37px;
+                width: 37px;
+                border-radius: 37px;
+                background-color: #000 !important;
+                display: block;
+                position: absolute;
+                top: 0px;
+                bottom:0px;
+                left: 140px;
+            }
+            .s_username{
+                margin-right: 50px;
+            }
+            .s_header_nav{
+                    background: #F8EEFA !important;
+                }
+                .s_header_nav a{
+                    border-bottom:1px solid #744c97 ;
+                    border-radius: 0px !important;
+                }
+    
     @media only screen and (max-width: 600px) {
       .s_pink{  
         height: 80px;
@@ -197,8 +222,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link s_username" href="#">Nidhi Bokadiya<i class="fas fa-chevron-down"></i><span id="circle"></span>
         </a>
       </li>
     </ul>
@@ -407,6 +431,7 @@
     <div class="content-header">
       <div class="container-fluid s_pink s_pinkcolor p-3">
         <div class="s_pinkbox h-100">
+          
          
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -416,6 +441,31 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        <div class="s_main text-black p-3" >
+          <h1>User Experience Mapping-Project ABC</h1>
+        <nav aria-label="...">
+          <ul class="pagination mb-4 mb-lg-0 s_header_nav p-3">
+            <li class="page-item disabled">
+              <li class="page-item"><a class="page-link" href="#">projects</a></li>
+            <li class="page-item active"><a class="page-link" href="#">projects details</a></li>
+            <li class="page-item" aria-current="page">
+              <li class="page-item"><a class="page-link" href="#">setup</a></li>
+            <li class="page-item"><a class="page-link" href="#">share</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">fieldwork status</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">process</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">report</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+            
+        
 
       </div><!-- /.container-fluid -->
     </section>
