@@ -70,10 +70,10 @@
                     background: #F8EEFA !important;
                 }
                 .s_header_nav a{
-                    border-bottom:1px solid #744c97 ;
+                   width: 150px;
+                   border: none;
                     border-radius: 0px !important;
                 }
-    
     @media only screen and (max-width: 600px) {
       .s_pink{  
         height: 80px;
@@ -444,11 +444,11 @@
         <div class="s_main text-black p-3" >
           <h1>User Experience Mapping-Project ABC</h1>
         <nav aria-label="...">
-          <ul class="pagination mb-4 mb-lg-0 s_header_nav p-3">
-            <li class="page-item disabled">
+          <ul class="pagination mb-4 mb-lg-0 s_header_nav p-5 bg-white text-black">
+            <li class="page-item disabled"></li>
               <li class="page-item"><a class="page-link" href="#">projects</a></li>
-            <li class="page-item active"><a class="page-link" href="#">projects details</a></li>
-            <li class="page-item" aria-current="page">
+            <li class="page-item  "><a class="page-link" href="#">projects details</a></li>
+            
               <li class="page-item"><a class="page-link" href="#">setup</a></li>
             <li class="page-item"><a class="page-link" href="#">share</a></li>
             <li class="page-item">
@@ -461,8 +461,31 @@
               <a class="page-link" href="#">report</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        <ul class=" pagination mb-1 mb-lg-0 s_header_nav p-5">
+          <li class="page-item disabled">
+            <li class="page-item"><a class="page-link" href="#">project name </a>
+              <b>vinod4</b>
+            </li>
+          <li class="page-item "><a class="page-link" href="#">project id</a>
+            <b>61404b2ab96350</b>
+          </li>
+         
+            <li class="page-item"><a class="page-link" href="#">Research market</a>
+              <b>India</b>
+            </li>
+          <li class="page-item"><a class="page-link" href="#">sample size</a>
+            <b>10</b>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">survey type</a>
+            <b>False</b>
+          </li>
+        </ul>
+      </nav>
+            <button type="button" class="btn btn-lg btn-primary float-right">Create a project
+            </button>
+    </div>
+   
       
             
         
