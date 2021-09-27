@@ -27,9 +27,12 @@
   <!-- summernote -->
   <link rel="stylesheet" href="js/summernote/summernote-bs4.min.css">
   <style>
-    aside{
+   .s_purple{
       background-color: #442460 !important;
-    }
+    } 
+    .s_purple_txt{
+      color: #442460 !important;
+    } 
     .s_pinkcolor{
       background-color: #F8EEFA;
     }
@@ -43,7 +46,7 @@
       background-size: contain;
     }
     .s_main{
-               min-height: 900px;
+           min-height: 900px;
     }
     .s_tbdr{
       border:1px dashed #000;
@@ -69,11 +72,22 @@
             .s_header_nav{
                     background: #F8EEFA !important;
                 }
-                .s_header_nav a{
-                   width: 150px;
-                   border: none;
-                    border-radius: 0px !important;
-                }
+                ::placeholder {
+      color: #000 !important;
+    }
+    .s_border-bottom:focus ~ .s_xyz{
+      top:-10px;
+      font-size: 0.8em;
+    }
+    .s_border-bottom{
+      border-bottom: 2px solid #000 !important;
+    }
+    .s_xyz{
+      position: absolute;
+      top:0px;
+      transition: all 0.1s linear;
+      font-size: 1em;
+    }
     @media only screen and (max-width: 600px) {
       .s_pink{  
         height: 80px;
@@ -87,6 +101,58 @@
   </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+   <!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg pt-5">
+    <div class="modal-content mt-5">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title" id="exampleModalLabel">Let's create a project for you!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>We need a little information to create your first project. This should take just a couple of minutes.</p>
+        <form>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group" style="position: relative;">
+                <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span class="s_xyz">Enter project name</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group style="position: relative;">
+                <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span class="s_xyz">Enter research market</span>
+              </div>
+            </div>
+          </div>
+          
+
+        </form>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group" style="position: relative;">
+              <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+              <span class="s_xyz">Enter sample size</span>
+          </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group style="position: relative;">
+                <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span class="s_xyz">survey type</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Reset screen</button>
+        <button type="submit" class="btn btn-primary">Create project</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -230,7 +296,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class=" s_purple main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link bg-white">
       <img src="img/logo2.png" alt="IDSTATS" class="brand-image" style="opacity: .8">
@@ -262,26 +328,6 @@
                 <i class="right fas fa-angle-left m-2"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link m-2">
@@ -299,57 +345,6 @@
                 
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Resource</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation + Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Sidebar <small>+ Custom Area</small></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Navbar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Footer</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="fas fa-dollar-sign m-2"></i>
@@ -357,33 +352,6 @@
                 Pricing
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Flot</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/uplot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>uPlot</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="fas fa-user m-2"></i>
@@ -391,31 +359,6 @@
                Help
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
-                </a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -430,10 +373,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid s_pink s_pinkcolor p-3">
-        <div class="s_pinkbox h-100">
-          
-         
-        </div><!-- /.row -->
+        <div class="s_pinkbox h-100"></div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -441,50 +381,17 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="s_main text-black p-3" >
-          <h1>User Experience Mapping-Project ABC</h1>
-        <nav aria-label="...">
-          <ul class="pagination mb-4 mb-lg-0 s_header_nav p-5 bg-white text-black">
-            <li class="page-item disabled"></li>
-              <li class="page-item"><a class="page-link" href="#">projects</a></li>
-            <li class="page-item  "><a class="page-link" href="#">projects details</a></li>
-            
-              <li class="page-item"><a class="page-link" href="#">setup</a></li>
-            <li class="page-item"><a class="page-link" href="#">share</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">fieldwork status</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">process</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">report</a>
-            </li>
-          </ul>
-        <ul class=" pagination mb-1 mb-lg-0 s_header_nav p-5">
-          <li class="page-item disabled">
-            <li class="page-item"><a class="page-link" href="#">project name </a>
-              <b>vinod4</b>
-            </li>
-          <li class="page-item "><a class="page-link" href="#">project id</a>
-            <b>61404b2ab96350</b>
-          </li>
-         
-            <li class="page-item"><a class="page-link" href="#">Research market</a>
-              <b>India</b>
-            </li>
-          <li class="page-item"><a class="page-link" href="#">sample size</a>
-            <b>10</b>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">survey type</a>
-            <b>False</b>
-          </li>
-        </ul>
-      </nav>
-            <button type="button" class="btn btn-lg btn-primary float-right">Create a project
-            </button>
-    </div>
+        <div class="row">
+          <div class="col-6">
+            <h3 class="fw-bold s_purple_txt">User Experience Mapping</h3>
+          </div>
+          <div class="col-6 ">
+            <button class="btn float-right s_purple text-white"  data-toggle="modal" data-target="#exampleModal">Create new project</button>
+          </div>
+        </div>
+        
+ 
+          
    
       
             
