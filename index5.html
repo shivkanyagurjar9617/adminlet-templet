@@ -88,9 +88,18 @@
     .s_border-bottom{
       border-bottom: 2px solid #000 !important;
     }
-    .s_panel > li{
-        padding: 10px 30px;
+    .s_tabpanel a{
+        padding: 7px 30px;
+        line-height: 44px;
     }
+    .s_tabpanel{
+      height: 44px;
+    }
+    .active{
+      
+      border-bottom: 4px solid #FFB900 !important;
+    }
+    
       
     
     .s_xyz{
@@ -99,6 +108,14 @@
       transition: all 0.1s linear;
       font-size: 1em;
     }
+
+    @media only screen and (max-width: 990px) {
+      .s_tabpanel > div{  
+        width: 1200px;
+      }
+      .s_tabpanel{  
+        overflow-x:scroll !important;
+      }
     @media only screen and (max-width: 600px) {
       .s_pink{  
         height: 80px;
@@ -108,7 +125,7 @@
       .s_pinkbox{  
         background-size: cover;
       }
-    }
+    
   </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -396,9 +413,11 @@
         </div>
           <div class="row">
             <div class="col-12">
-          <ul class="nav nav-tabs s_panel bg-white">
-            <li class="active"><a data-toggle="tab" href="#projects">projects</a></li>
-            <li><a data-toggle="tab" href="#project_details">projects details </a></li>
+                <div class="s_tabpanel">
+                    <div class="s_tabpanel_child">
+          <ul class="nav nav-tabs s_tabpanel bg-white">
+            <li><a data-toggle="tab" href="#projects">projects</a></li>
+            <li class="active"><a data-toggle="tab" href="#project_details">projects details </a></li>
             <li><a data-toggle="tab" href="#setup">setup</a></li>
             <li><a data-toggle="tab" href="#Share">Share</a></li>
             <li><a data-toggle="tab" href="#Feildework_Status">Fieldwork status</a></li>
