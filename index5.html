@@ -51,9 +51,15 @@
     .s_tbdr{
       border:1px dashed #000;
     }
-    .active{
+    .s_active{
              background-color: #FFB900 !important;
              color: black !important;
+             
+    }
+     .active{
+          border-bottom: #FFB900 !important;
+ 
+        color: black !important;
     }
       #circle{
                 height: 37px;
@@ -82,6 +88,11 @@
     .s_border-bottom{
       border-bottom: 2px solid #000 !important;
     }
+    .s_panel > li{
+        padding: 10px 30px;
+    }
+      
+    
     .s_xyz{
       position: absolute;
       top:0px;
@@ -318,7 +329,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link s_active">
                 <i class="fas fa-chart-bar"></i>
               <p>
                Client Dashboard
@@ -380,13 +391,79 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-6">
-            <h3 class="fw-bold s_purple_txt">User Experience Mapping</h3>
+            <h3 class="fw-bold s_purple_txt">User Experience Mapping project -ABC</h3>
           </div>
-          <div class="col-6 ">
+        </div>
+          <div class="row">
+            <div class="col-12">
+          <ul class="nav nav-tabs s_panel bg-white">
+            <li class="active"><a data-toggle="tab" href="#projects">projects</a></li>
+            <li><a data-toggle="tab" href="#project_details">projects details </a></li>
+            <li><a data-toggle="tab" href="#setup">setup</a></li>
+            <li><a data-toggle="tab" href="#Share">Share</a></li>
+            <li><a data-toggle="tab" href="#Feildework_Status">Fieldwork status</a></li>
+            <li><a data-toggle="tab" href="#process">process</a></li>
+            <li><a data-toggle="tab" href="#Report">Report</a></li>
+          </ul>
+          
+          <div class="tab-content">
+            <div id="projects" class="tab-pane fade in active">
+              <h3>HOME</h3>
+              <p>Some content.</p>
+            </div>
+            <div id="projects_details" class="tab-pane fade">
+              <h3>Menu 1</h3>
+              <p>Some content in menu 1.</p>
+            </div>
+            <div id="Setup" class="tab-pane fade">
+              <h3>Menu 2</h3>
+              <p>Some content in menu 2.</p>
+            </div>
+            <div id="Share" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+              <div id="#Feildework _Status" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+              <div id="process" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+              <div id="report" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  
+              </div>
+          </div>
+         
+            
+              
+          
             <button class="btn float-right s_purple text-white"  data-toggle="modal" data-target="#exampleModal">Create new project</button>
           </div>
         </div>
         
+    </div>
+    
  
           
    
